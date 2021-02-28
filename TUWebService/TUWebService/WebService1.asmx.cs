@@ -20,12 +20,17 @@ namespace TUWebService
         [WebMethod]
         public String ReadPath(string fileName)
         {
-            // Example #1
-            // Read the file as one string.
-            string text = System.IO.File.ReadAllText(@"C:\inetpub\wwwroot\" + fileName);
-
-            // Display the file contents to the console. Variable text is a string.
-            //System.Console.WriteLine("Contents of WriteText.txt = {0}", text);
+            string text = "";
+            
+            try
+            {
+                text = System.IO.File.ReadAllText(@"C:\inetpub\wwwroot\" + fileName);
+            }
+            catch (System.IO.FileNotFoundException)
+            {
+                text = "A file with the inserted filename above does not exist. Did you forget .txt?";
+            }
+            
             return text;
         }
 
