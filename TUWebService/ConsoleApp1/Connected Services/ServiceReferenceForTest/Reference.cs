@@ -15,60 +15,27 @@ namespace ConsoleApp1.ServiceReferenceForTest {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReferenceForTest.WebService1Soap")]
     public interface WebService1Soap {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/readPath", ReplyAction="*")]
-        void readPath();
+        // CODEGEN: Generating message contract since element name fileName from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReadPath", ReplyAction="*")]
+        ConsoleApp1.ServiceReferenceForTest.ReadPathResponse ReadPath(ConsoleApp1.ServiceReferenceForTest.ReadPathRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/readPath", ReplyAction="*")]
-        System.Threading.Tasks.Task readPathAsync();
-        
-        // CODEGEN: Generating message contract since element name HelloWorldResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
-        ConsoleApp1.ServiceReferenceForTest.HelloWorldResponse HelloWorld(ConsoleApp1.ServiceReferenceForTest.HelloWorldRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
-        System.Threading.Tasks.Task<ConsoleApp1.ServiceReferenceForTest.HelloWorldResponse> HelloWorldAsync(ConsoleApp1.ServiceReferenceForTest.HelloWorldRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReadPath", ReplyAction="*")]
+        System.Threading.Tasks.Task<ConsoleApp1.ServiceReferenceForTest.ReadPathResponse> ReadPathAsync(ConsoleApp1.ServiceReferenceForTest.ReadPathRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldRequest {
+    public partial class ReadPathRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorld", Namespace="http://tempuri.org/", Order=0)]
-        public ConsoleApp1.ServiceReferenceForTest.HelloWorldRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ReadPath", Namespace="http://tempuri.org/", Order=0)]
+        public ConsoleApp1.ServiceReferenceForTest.ReadPathRequestBody Body;
         
-        public HelloWorldRequest() {
+        public ReadPathRequest() {
         }
         
-        public HelloWorldRequest(ConsoleApp1.ServiceReferenceForTest.HelloWorldRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class HelloWorldRequestBody {
-        
-        public HelloWorldRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorldResponse", Namespace="http://tempuri.org/", Order=0)]
-        public ConsoleApp1.ServiceReferenceForTest.HelloWorldResponseBody Body;
-        
-        public HelloWorldResponse() {
-        }
-        
-        public HelloWorldResponse(ConsoleApp1.ServiceReferenceForTest.HelloWorldResponseBody Body) {
+        public ReadPathRequest(ConsoleApp1.ServiceReferenceForTest.ReadPathRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -77,16 +44,50 @@ namespace ConsoleApp1.ServiceReferenceForTest {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class HelloWorldResponseBody {
+    public partial class ReadPathRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string HelloWorldResult;
+        public string fileName;
         
-        public HelloWorldResponseBody() {
+        public ReadPathRequestBody() {
         }
         
-        public HelloWorldResponseBody(string HelloWorldResult) {
-            this.HelloWorldResult = HelloWorldResult;
+        public ReadPathRequestBody(string fileName) {
+            this.fileName = fileName;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ReadPathResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ReadPathResponse", Namespace="http://tempuri.org/", Order=0)]
+        public ConsoleApp1.ServiceReferenceForTest.ReadPathResponseBody Body;
+        
+        public ReadPathResponse() {
+        }
+        
+        public ReadPathResponse(ConsoleApp1.ServiceReferenceForTest.ReadPathResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ReadPathResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string ReadPathResult;
+        
+        public ReadPathResponseBody() {
+        }
+        
+        public ReadPathResponseBody(string ReadPathResult) {
+            this.ReadPathResult = ReadPathResult;
         }
     }
     
@@ -117,35 +118,29 @@ namespace ConsoleApp1.ServiceReferenceForTest {
                 base(binding, remoteAddress) {
         }
         
-        public void readPath() {
-            base.Channel.readPath();
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ConsoleApp1.ServiceReferenceForTest.ReadPathResponse ConsoleApp1.ServiceReferenceForTest.WebService1Soap.ReadPath(ConsoleApp1.ServiceReferenceForTest.ReadPathRequest request) {
+            return base.Channel.ReadPath(request);
         }
         
-        public System.Threading.Tasks.Task readPathAsync() {
-            return base.Channel.readPathAsync();
+        public string ReadPath(string fileName) {
+            ConsoleApp1.ServiceReferenceForTest.ReadPathRequest inValue = new ConsoleApp1.ServiceReferenceForTest.ReadPathRequest();
+            inValue.Body = new ConsoleApp1.ServiceReferenceForTest.ReadPathRequestBody();
+            inValue.Body.fileName = fileName;
+            ConsoleApp1.ServiceReferenceForTest.ReadPathResponse retVal = ((ConsoleApp1.ServiceReferenceForTest.WebService1Soap)(this)).ReadPath(inValue);
+            return retVal.Body.ReadPathResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ConsoleApp1.ServiceReferenceForTest.HelloWorldResponse ConsoleApp1.ServiceReferenceForTest.WebService1Soap.HelloWorld(ConsoleApp1.ServiceReferenceForTest.HelloWorldRequest request) {
-            return base.Channel.HelloWorld(request);
+        System.Threading.Tasks.Task<ConsoleApp1.ServiceReferenceForTest.ReadPathResponse> ConsoleApp1.ServiceReferenceForTest.WebService1Soap.ReadPathAsync(ConsoleApp1.ServiceReferenceForTest.ReadPathRequest request) {
+            return base.Channel.ReadPathAsync(request);
         }
         
-        public string HelloWorld() {
-            ConsoleApp1.ServiceReferenceForTest.HelloWorldRequest inValue = new ConsoleApp1.ServiceReferenceForTest.HelloWorldRequest();
-            inValue.Body = new ConsoleApp1.ServiceReferenceForTest.HelloWorldRequestBody();
-            ConsoleApp1.ServiceReferenceForTest.HelloWorldResponse retVal = ((ConsoleApp1.ServiceReferenceForTest.WebService1Soap)(this)).HelloWorld(inValue);
-            return retVal.Body.HelloWorldResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ConsoleApp1.ServiceReferenceForTest.HelloWorldResponse> ConsoleApp1.ServiceReferenceForTest.WebService1Soap.HelloWorldAsync(ConsoleApp1.ServiceReferenceForTest.HelloWorldRequest request) {
-            return base.Channel.HelloWorldAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ConsoleApp1.ServiceReferenceForTest.HelloWorldResponse> HelloWorldAsync() {
-            ConsoleApp1.ServiceReferenceForTest.HelloWorldRequest inValue = new ConsoleApp1.ServiceReferenceForTest.HelloWorldRequest();
-            inValue.Body = new ConsoleApp1.ServiceReferenceForTest.HelloWorldRequestBody();
-            return ((ConsoleApp1.ServiceReferenceForTest.WebService1Soap)(this)).HelloWorldAsync(inValue);
+        public System.Threading.Tasks.Task<ConsoleApp1.ServiceReferenceForTest.ReadPathResponse> ReadPathAsync(string fileName) {
+            ConsoleApp1.ServiceReferenceForTest.ReadPathRequest inValue = new ConsoleApp1.ServiceReferenceForTest.ReadPathRequest();
+            inValue.Body = new ConsoleApp1.ServiceReferenceForTest.ReadPathRequestBody();
+            inValue.Body.fileName = fileName;
+            return ((ConsoleApp1.ServiceReferenceForTest.WebService1Soap)(this)).ReadPathAsync(inValue);
         }
     }
 }

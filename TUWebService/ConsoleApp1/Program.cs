@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1.ServiceReferenceForTest;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,9 +12,10 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Program p = new Program();
-            p.ReadPath();
-        
+            WebService1SoapClient web = new WebService1SoapClient();
+            Console.WriteLine(web.ReadPath("doyle.txt"));
+            Console.ReadLine();
+
         }
     }
 }

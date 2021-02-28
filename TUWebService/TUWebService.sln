@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUWebService", "TUWebServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployedWindowsClient", "EmployedWindowsClient\EmployedWindowsClient.csproj", "{BD63ED40-D30C-42A0-A273-7C1454E8F36C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{D3B9A409-D916-40A7-82A5-CEE7048DB680}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BD63ED40-D30C-42A0-A273-7C1454E8F36C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD63ED40-D30C-42A0-A273-7C1454E8F36C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD63ED40-D30C-42A0-A273-7C1454E8F36C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3B9A409-D916-40A7-82A5-CEE7048DB680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B9A409-D916-40A7-82A5-CEE7048DB680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B9A409-D916-40A7-82A5-CEE7048DB680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B9A409-D916-40A7-82A5-CEE7048DB680}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
