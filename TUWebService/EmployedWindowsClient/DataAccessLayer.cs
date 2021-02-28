@@ -10,17 +10,8 @@ namespace EmployedWindowsClient
     {
         public string ReadFile(string fileName)
         {
-
-            try
-            {
-                WebService1 proxy = new WebService1();
-                return proxy.ReadPath(fileName);
-            }
-            catch (System.Web.Services.Protocols.SoapException ex)
-            {
-                return "";
-            }
-            
+            WebService1 proxy = new WebService1();
+            return proxy.ReadPath(fileName);
         }
     }
 }

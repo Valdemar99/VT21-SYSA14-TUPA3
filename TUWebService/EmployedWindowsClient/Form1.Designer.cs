@@ -38,9 +38,9 @@
             // 
             // buttonReadFile
             // 
-            this.buttonReadFile.Location = new System.Drawing.Point(355, 19);
+            this.buttonReadFile.Location = new System.Drawing.Point(397, 19);
             this.buttonReadFile.Name = "buttonReadFile";
-            this.buttonReadFile.Size = new System.Drawing.Size(75, 23);
+            this.buttonReadFile.Size = new System.Drawing.Size(102, 23);
             this.buttonReadFile.TabIndex = 0;
             this.buttonReadFile.Text = "Read file";
             this.buttonReadFile.UseVisualStyleBackColor = true;
@@ -49,7 +49,7 @@
             // labelFileName
             // 
             this.labelFileName.AutoSize = true;
-            this.labelFileName.Location = new System.Drawing.Point(32, 19);
+            this.labelFileName.Location = new System.Drawing.Point(32, 24);
             this.labelFileName.Name = "labelFileName";
             this.labelFileName.Size = new System.Drawing.Size(80, 13);
             this.labelFileName.TabIndex = 1;
@@ -57,9 +57,9 @@
             // 
             // textBoxReadFile
             // 
-            this.textBoxReadFile.Location = new System.Drawing.Point(134, 19);
+            this.textBoxReadFile.Location = new System.Drawing.Point(138, 21);
             this.textBoxReadFile.Name = "textBoxReadFile";
-            this.textBoxReadFile.Size = new System.Drawing.Size(192, 20);
+            this.textBoxReadFile.Size = new System.Drawing.Size(220, 20);
             this.textBoxReadFile.TabIndex = 2;
             // 
             // printDialog1
@@ -70,7 +70,7 @@
             // 
             this.richTextBoxPrintFile.Location = new System.Drawing.Point(35, 69);
             this.richTextBoxPrintFile.Name = "richTextBoxPrintFile";
-            this.richTextBoxPrintFile.Size = new System.Drawing.Size(395, 329);
+            this.richTextBoxPrintFile.Size = new System.Drawing.Size(464, 329);
             this.richTextBoxPrintFile.TabIndex = 5;
             this.richTextBoxPrintFile.Text = "";
             // 
@@ -87,15 +87,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 424);
+            this.ClientSize = new System.Drawing.Size(539, 439);
             this.Controls.Add(this.labelFeedback);
             this.Controls.Add(this.richTextBoxPrintFile);
             this.Controls.Add(this.textBoxReadFile);
             this.Controls.Add(this.labelFileName);
             this.Controls.Add(this.buttonReadFile);
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Programming Assignment 3 - Technological Unemployment, Inc.";
             this.ResumeLayout(false);
             this.PerformLayout();
 

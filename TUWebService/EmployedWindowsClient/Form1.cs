@@ -20,25 +20,22 @@ namespace EmployedWindowsClient
             labelFeedback.ResetText();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
+            labelFeedback.ResetText();
+            richTextBoxPrintFile.ResetText();
+
             string fileName = textBoxReadFile.Text;
             string content = "";
 
             content = dal.ReadFile(fileName);
 
-            if(content == "")
+            if(content == "A file with the inserted filename above does not exist. Did you forget .txt?")
             {
-                labelFeedback.Text = "Could not find file, please try again.";
+                labelFeedback.Text = content;
 
             } else
             {
-                labelFeedback.ResetText();
                 richTextBoxPrintFile.Text = content;
             }
             
