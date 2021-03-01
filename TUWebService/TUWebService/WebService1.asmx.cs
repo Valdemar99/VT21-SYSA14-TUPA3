@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Services;
 
+
 namespace TUWebService
 {
     /// <summary>
@@ -21,16 +22,24 @@ namespace TUWebService
         public String ReadPath(string fileName)
         {
             string text = "";
-            
+
             try
             {
-                text = System.IO.File.ReadAllText(@"C:\inetpub\wwwroot\" + fileName);
+                text = File.ReadAllText(@"C:\inetpub\wwwroot\" + fileName);
             }
-            catch (System.IO.FileNotFoundException)
+            catch (FileNotFoundException)
             {
                 text = "A file with the inserted filename above does not exist. Did you forget .txt?";
             }
-            
+            catch (DriveNotFoundException)
+            {
+                text = "Check connection and try again.";
+            }
+            catch (DirectoryNotFoundException)
+            {
+                text = "Please type filename.";
+            }
+
             return text;
         }
 

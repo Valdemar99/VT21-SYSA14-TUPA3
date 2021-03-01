@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUWebService", "TUWebService\TUWebService.csproj", "{08846F43-96AA-403F-B385-6B2CBBAE9E0C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployedWindowsClient", "EmployedWindowsClient\EmployedWindowsClient.csproj", "{BD63ED40-D30C-42A0-A273-7C1454E8F36C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{08846F43-96AA-403F-B385-6B2CBBAE9E0C} = {08846F43-96AA-403F-B385-6B2CBBAE9E0C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{D3B9A409-D916-40A7-82A5-CEE7048DB680}"
 EndProject

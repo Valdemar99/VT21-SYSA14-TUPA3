@@ -8,19 +8,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConsoleApp1.ServiceReferenceForTest {
+namespace EmployedWindowsClient.ServiceReference1 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReferenceForTest.WebService1Soap")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.WebService1Soap")]
     public interface WebService1Soap {
         
         // CODEGEN: Generating message contract since element name fileName from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReadPath", ReplyAction="*")]
-        ConsoleApp1.ServiceReferenceForTest.ReadPathResponse ReadPath(ConsoleApp1.ServiceReferenceForTest.ReadPathRequest request);
+        EmployedWindowsClient.ServiceReference1.ReadPathResponse ReadPath(EmployedWindowsClient.ServiceReference1.ReadPathRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ReadPath", ReplyAction="*")]
-        System.Threading.Tasks.Task<ConsoleApp1.ServiceReferenceForTest.ReadPathResponse> ReadPathAsync(ConsoleApp1.ServiceReferenceForTest.ReadPathRequest request);
+        System.Threading.Tasks.Task<EmployedWindowsClient.ServiceReference1.ReadPathResponse> ReadPathAsync(EmployedWindowsClient.ServiceReference1.ReadPathRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -30,12 +30,12 @@ namespace ConsoleApp1.ServiceReferenceForTest {
     public partial class ReadPathRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ReadPath", Namespace="http://tempuri.org/", Order=0)]
-        public ConsoleApp1.ServiceReferenceForTest.ReadPathRequestBody Body;
+        public EmployedWindowsClient.ServiceReference1.ReadPathRequestBody Body;
         
         public ReadPathRequest() {
         }
         
-        public ReadPathRequest(ConsoleApp1.ServiceReferenceForTest.ReadPathRequestBody Body) {
+        public ReadPathRequest(EmployedWindowsClient.ServiceReference1.ReadPathRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -64,12 +64,12 @@ namespace ConsoleApp1.ServiceReferenceForTest {
     public partial class ReadPathResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ReadPathResponse", Namespace="http://tempuri.org/", Order=0)]
-        public ConsoleApp1.ServiceReferenceForTest.ReadPathResponseBody Body;
+        public EmployedWindowsClient.ServiceReference1.ReadPathResponseBody Body;
         
         public ReadPathResponse() {
         }
         
-        public ReadPathResponse(ConsoleApp1.ServiceReferenceForTest.ReadPathResponseBody Body) {
+        public ReadPathResponse(EmployedWindowsClient.ServiceReference1.ReadPathResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -92,12 +92,12 @@ namespace ConsoleApp1.ServiceReferenceForTest {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface WebService1SoapChannel : ConsoleApp1.ServiceReferenceForTest.WebService1Soap, System.ServiceModel.IClientChannel {
+    public interface WebService1SoapChannel : EmployedWindowsClient.ServiceReference1.WebService1Soap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class WebService1SoapClient : System.ServiceModel.ClientBase<ConsoleApp1.ServiceReferenceForTest.WebService1Soap>, ConsoleApp1.ServiceReferenceForTest.WebService1Soap {
+    public partial class WebService1SoapClient : System.ServiceModel.ClientBase<EmployedWindowsClient.ServiceReference1.WebService1Soap>, EmployedWindowsClient.ServiceReference1.WebService1Soap {
         
         public WebService1SoapClient() {
         }
@@ -119,28 +119,28 @@ namespace ConsoleApp1.ServiceReferenceForTest {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ConsoleApp1.ServiceReferenceForTest.ReadPathResponse ConsoleApp1.ServiceReferenceForTest.WebService1Soap.ReadPath(ConsoleApp1.ServiceReferenceForTest.ReadPathRequest request) {
+        EmployedWindowsClient.ServiceReference1.ReadPathResponse EmployedWindowsClient.ServiceReference1.WebService1Soap.ReadPath(EmployedWindowsClient.ServiceReference1.ReadPathRequest request) {
             return base.Channel.ReadPath(request);
         }
         
         public string ReadPath(string fileName) {
-            ConsoleApp1.ServiceReferenceForTest.ReadPathRequest inValue = new ConsoleApp1.ServiceReferenceForTest.ReadPathRequest();
-            inValue.Body = new ConsoleApp1.ServiceReferenceForTest.ReadPathRequestBody();
+            EmployedWindowsClient.ServiceReference1.ReadPathRequest inValue = new EmployedWindowsClient.ServiceReference1.ReadPathRequest();
+            inValue.Body = new EmployedWindowsClient.ServiceReference1.ReadPathRequestBody();
             inValue.Body.fileName = fileName;
-            ConsoleApp1.ServiceReferenceForTest.ReadPathResponse retVal = ((ConsoleApp1.ServiceReferenceForTest.WebService1Soap)(this)).ReadPath(inValue);
+            EmployedWindowsClient.ServiceReference1.ReadPathResponse retVal = ((EmployedWindowsClient.ServiceReference1.WebService1Soap)(this)).ReadPath(inValue);
             return retVal.Body.ReadPathResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ConsoleApp1.ServiceReferenceForTest.ReadPathResponse> ConsoleApp1.ServiceReferenceForTest.WebService1Soap.ReadPathAsync(ConsoleApp1.ServiceReferenceForTest.ReadPathRequest request) {
+        System.Threading.Tasks.Task<EmployedWindowsClient.ServiceReference1.ReadPathResponse> EmployedWindowsClient.ServiceReference1.WebService1Soap.ReadPathAsync(EmployedWindowsClient.ServiceReference1.ReadPathRequest request) {
             return base.Channel.ReadPathAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ConsoleApp1.ServiceReferenceForTest.ReadPathResponse> ReadPathAsync(string fileName) {
-            ConsoleApp1.ServiceReferenceForTest.ReadPathRequest inValue = new ConsoleApp1.ServiceReferenceForTest.ReadPathRequest();
-            inValue.Body = new ConsoleApp1.ServiceReferenceForTest.ReadPathRequestBody();
+        public System.Threading.Tasks.Task<EmployedWindowsClient.ServiceReference1.ReadPathResponse> ReadPathAsync(string fileName) {
+            EmployedWindowsClient.ServiceReference1.ReadPathRequest inValue = new EmployedWindowsClient.ServiceReference1.ReadPathRequest();
+            inValue.Body = new EmployedWindowsClient.ServiceReference1.ReadPathRequestBody();
             inValue.Body.fileName = fileName;
-            return ((ConsoleApp1.ServiceReferenceForTest.WebService1Soap)(this)).ReadPathAsync(inValue);
+            return ((EmployedWindowsClient.ServiceReference1.WebService1Soap)(this)).ReadPathAsync(inValue);
         }
     }
 }

@@ -34,7 +34,15 @@ namespace EmployedWindowsClient
             {
                 labelFeedback.Text = content;
 
-            } else
+            } else if(content == "Please type filename.")
+            {
+                labelFeedback.Text = content;
+
+            }else if(content == "Check your connection and try again.")
+            {
+                labelFeedback.Text = content;
+            }
+            else
             {
                 richTextBoxPrintFile.Text = content;
             }
