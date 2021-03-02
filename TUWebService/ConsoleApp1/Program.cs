@@ -20,19 +20,13 @@ namespace ConsoleApp1
             {
                 do
                 {
-                    do
-                    {
-                        Console.WriteLine("Please choose txt-file to be printed: ");
-                        string filename = Console.ReadLine();
+                    Console.WriteLine("Please choose txt-file to be printed: ");
+                    string filename = Console.ReadLine();
 
-                        fileContent = proxy.ReadPath(filename);
-                        Console.WriteLine("\n" + fileContent + "\n");
+                    fileContent = proxy.ReadPath(filename);
+                    Console.WriteLine("\n" + fileContent + "\n");
 
-                    } while (fileContent == "A file with the inserted filename above does not exist. Did you forget .txt?");
-
-                }while (fileContent == "Please type filename.");
-
-
+                } while (fileContent.Equals("A file with the inserted filename above does not exist. Did you forget .txt?") || fileContent.Equals("Please type filename."));
                 do
                 {
                     Console.WriteLine("Do you want to read another txt-file?(Write yes/Yes) ");
@@ -40,19 +34,14 @@ namespace ConsoleApp1
 
                     if (anotherFile.Equals("Yes") || anotherFile.Equals("yes"))
                     {
-                        do
+                        do //this once
                         {
-                            do
-                            {
-                                Console.WriteLine("Please choose txt-file to be printed: ");
-                                string filename = Console.ReadLine();
+                            Console.WriteLine("Please choose txt-file to be printed: ");
+                            string filename = Console.ReadLine();
 
-                                fileContent = proxy.ReadPath(filename);
-                                Console.WriteLine("\n" + fileContent + "\n");
-                            } while (fileContent == "A file with the inserted filename above does not exist. Did you forget .txt?");
-
-                        } while (fileContent == "Please type filename.");
-
+                            fileContent = proxy.ReadPath(filename);
+                            Console.WriteLine("\n" + fileContent + "\n");
+                        } while (fileContent.Equals("A file with the inserted filename above does not exist. Did you forget .txt?") || fileContent.Equals("Please type filename.")); //and continue if this is true
                     }
 
                 } while (anotherFile.Equals("Yes") || anotherFile.Equals("yes")); 
