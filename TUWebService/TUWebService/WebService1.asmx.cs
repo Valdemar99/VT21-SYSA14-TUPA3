@@ -19,7 +19,7 @@ namespace TUWebService
     public class WebService1 : System.Web.Services.WebService
     {
         [WebMethod]
-        public String ReadPath(string fileName)
+        public string ReadPath(string fileName)
         {
             string text = "";
 
